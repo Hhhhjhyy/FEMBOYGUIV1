@@ -1,0 +1,290 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Femboy Gui V1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+OrionLib:MakeNotification({
+	Name = "Femboy GUI V1",
+	Content = "Welcome!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Home",
+	Icon = "rbxassetid://579271238",
+	PremiumOnly = false
+})
+
+getgenv().SelectScriptHub = "nil"
+getgenv().SelectAdmin = "nil"
+getgenv().SelectDex = "nil"
+getgenv().SelectFe = "nil"
+getgenv().SelectAoe = "nil"
+getgenv().SelectPH = "nil"
+getgenv().SelectLocalPlayer = "nil"
+
+local Section = Tab:AddSection({
+	Name = "Femboy Gui V1"
+})
+
+local Tab = Window:MakeTab({
+	Name = "Script Hub",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Made by Me"
+})
+
+Tab:AddButton({
+	Name = "Load Script",
+	Callback = function()
+      		if getgenv().SelectScriptHub == "Push Simulator" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/PUSHSIMULATOR.lua')))()
+      elseif getgenv().SelectScriptHub == "Ugc Limiteds Hub" then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubIngameUgcLimiteds.lua"))()
+      elseif getgenv().SelectScriptHub == "The Circle" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/C39cfVy1'),true))()
+      elseif getgenv().SelectScriptHub == "+1 Speed Per Second" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/SPEED.lua')))()
+      elseif getgenv().SelectScriptHub == "+1 Jump Per Second" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Scripts/main/JUMP.lua')))()
+      
+      end
+  	end    
+})
+
+Tab:AddDropdown({
+	Name = "Select Script",
+	Default = "Empty",
+	Options = {"Push Simulator", "Anime Clash Simulator", "Every 2 Min Ugc", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator",},
+	Callback = function(Value)
+		getgenv().SelectScriptHub = Value
+	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Inf Yeld & Dex",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Admin Section"
+})
+
+Tab:AddButton({
+	Name = "Execute",
+	Callback = function()
+      		if getgenv().SelectAdmin == "Infinite Yield" then
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+      
+      end
+  	end    
+})
+
+Tab:AddDropdown({
+	Name = "Select Script",
+	Default = "Empty",
+	Options = {"Infinite Yield",},
+	Callback = function(Value)
+		getgenv().SelectAdmin = Value
+	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Dex Section"
+})
+
+Tab:AddButton({
+	Name = "Execute",
+	Callback = function()
+      		if getgenv().SelectDex == "Dark Dex" then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+      elseif getgenv().SelectDex == "Old Dex" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/xxsfytd/Dex/main/Dex.lua')))()
+      elseif getgenv().SelectDex == "Infinite Yield Dex" then
+      getgenv().Key = "Bash"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3AIY%20Dex",true))()
+
+      end
+  	end    
+})
+
+Tab:AddDropdown({
+	Name = "Select Script",
+	Default = "Empty",
+	Options = {"Dark Dex", "Old Dex", "Infinite Yield Dex",},
+	Callback = function(Value)
+		getgenv().SelectDex = Value
+	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Mobile",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "FE & Mobile Section"
+})
+
+Tab:AddButton({
+	Name = "Execute",
+	Callback = function()
+           if getgenv().SelectFe == "Emotes" then
+      loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
+      elseif getgenv().SelectFe == "Fly Mobile" then
+      loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+      elseif getgenv().SelectFe == "Spy Gui" then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/MichaelScripter/MiniScript/main/Spy%20gui.lua"))()
+      elseif getgenv().SelectFe == "Toggle Noclip" then
+      loadstring(game:HttpGet("https://pastebin.com/raw/B5xRxTnk",true))()
+      elseif getgenv().SelectFe == "Teleport Tool" then
+      loadstring(game:HttpGet(('https://pastebin.com/raw/E0mTN6L6')))()
+      elseif getgenv().SelectFe == "Hitbox Expander" then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+      elseif getgenv().SelectFe == "Keyboard" then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+      elseif getgenv().SelectFe == "Speed Changer" then
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/PrototypeRBLX/Speed-Script/main/README.md'),true))()
+      elseif getgenv().SelectPH == "Vehicle Fly" then
+      loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
+      
+      end
+  	end    
+})
+
+Tab:AddDropdown({
+	Name = "Select Fe Script",
+	Default = "Empty",
+	Options = {"Emotes", "Fly Mobile", "Spy Gui", "Toggle Noclip", "Teleport Tool", "Hitbox Expander",},
+	Callback = function(Value)
+		getgenv().SelectFe = Value
+	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Prompts"
+})
+
+Tab:AddButton({
+	Name = "Show Prompts",
+	Callback = function()
+      		local COREGUI = game:GetService("CoreGui")
+
+-- Check if the PurchasePrompt exists
+if COREGUI:FindFirstChild("PurchasePrompt") then
+    -- Set Enabled to true
+    COREGUI.PurchasePrompt.Enabled = true
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Hide Prompts",
+	Callback = function()
+      		local COREGUI = game:GetService("CoreGui")
+
+-- Check if the PurchasePrompt exists
+if COREGUI:FindFirstChild("PurchasePrompt") then
+    -- Set Enabled to true
+    COREGUI.PurchasePrompt.Enabled = false
+end
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Local Player"
+})
+
+Tab:AddButton({
+	Name = "Execute",
+	Callback = function()
+	if getgenv().SelectLocalPlayer == "Anti-Afk" then
+      		loadstring(game:HttpGet(('https://pastebin.com/raw/Btt5A3CC')))()
+      elseif getgenv().SelectLocalPlayer == "Reset Character" then
+      		game:GetService("Players").LocalPlayer.Character:BreakJoints()
+      elseif getgenv().SelectLocalPlayer == "FPS Boost" then
+      _G.Settings = {
+
+    Players = {
+
+        ["Ignore Me"] = true, -- Ignore your Character
+
+        ["Ignore Others"] = true-- Ignore other Characters
+
+    },
+
+    Meshes = {
+
+        Destroy = false, -- Destroy Meshes
+
+        LowDetail = true -- Low detail meshes (NOT SURE IT DOES ANYTHING)
+
+    },
+
+    Images = {
+
+        Invisible = true, -- Invisible Images
+
+        LowDetail = false, -- Low detail images (NOT SURE IT DOES ANYTHING)
+
+        Destroy = false, -- Destroy Images
+
+    },
+
+    ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
+
+    ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
+
+    ["No Explosions"] = true, -- Makes Explosion's invisible
+
+    ["No Clothes"] = true, -- Removes Clothing from the game
+
+    ["Low Water Graphics"] = true, -- Removes Water Quality
+
+    ["No Shadows"] = true, -- Remove Shadows
+
+    ["Low Rendering"] = true, -- Lower Rendering
+
+    ["Low Quality Parts"] = true -- Lower quality parts
+
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+      
+end
+end
+}) 
+
+Tab:AddDropdown({
+	Name = "Select Local Player",
+	Default = "Empty",
+	Options = {"Anti-Afk", "Reset Character", "FPS Boost",},
+	Callback = function(Value)
+		getgenv().SelectLocalPlayer = Value
+	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Coming Soon??",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+
+
+
+
+
+OrionLib:Init()
