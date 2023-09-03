@@ -58,7 +58,7 @@ Tab:AddButton({
 Tab:AddDropdown({
 	Name = "Select Script",
 	Default = "Empty",
-	Options = {"Push Simulator", "Anime Clash Simulator", "Every 2 Min Ugc", "+1 Speed Per Second", "Radio Star Simulator", "One Piece Tycoon", "+1 Jump Per Second", "Ninja Simulator",},
+	Options = {"Push Simulator", "Ugc Limiteds Hub", "The Circle", "+1 Speed Per Second", "+1 Jump Per Second",},
 	Callback = function(Value)
 		getgenv().SelectScriptHub = Value
 	end    
